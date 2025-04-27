@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spirited Away</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .image-container {
+      text-align: center;
+    }
+    .image-container img {
+      max-width: 40%;
+      height: auto;
+    }
+    .text-container {
+      margin-top: 20px;
+      text-align: center; /* 使文本居中 */
+    }
+    .buttons {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center; /* 使按钮居中 */
+    }
+    .buttons button {
+      margin: 0 10px; /* 按钮之间的间隔 */
+      padding: 10px 20px; /* 按钮内边距 */
+      border: none;
+      cursor: pointer;
+      font-size: 16px; /* 按钮文本大小 */
+      transition: background-color 0.3s; /* 按钮颜色变化过渡 */
+    }
+    h1 {
+      color: #00bfff; /* 青蓝色 */
+      text-align: center; /* 使标题居中 */
+    }
+    .description-button {
+      background-color: #007bff; /* 蓝色 */
+      color: white;
+    }
+    .cast-button {
+      background-color: #28a745; /* 绿色 */
+      color: white;
+    }
+    .trivia-button {
+      background-color: #ffc107; /* 黄色 */
+      color: white;
+    }
+    .text-container p {
+      font-size: 18px; /* 文本大小 */
+      line-height: 1.6; /* 行高 */
+    }
+    .text-container p b {
+      display: block; /* 块级元素 */
+      margin-top: 10px; /* 与前文的间隔 */
+    }
+  </style>
+</head>
+<body>
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-12">
+        <h1>Spirited Away</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 image-container">
+        <img src="assets/Spirited_away_poster.webp" alt="Spirited Away Poster">
+      </div>
+    </div>
+    <div class="row text-container">
+      <div class="col-md-12">
+        <p id="description-text">Spirited Away tells the story of Chihiro, a young girl who finds herself trapped in a mysterious and magical world of spirits. To return to the human world, she must work in a bathhouse for the spirits and find her inner strength.</p>
+      </div>
+    </div>
+    <div class="row buttons">
+      <div class="col-md-4">
+        <button class="description-button" onclick="changeText('description')">Description</button>
+      </div>
+      <div class="col-md-4">
+        <button class="cast-button" onclick="changeText('cast')">Cast</button>
+      </div>
+      <div class="col-md-4">
+        <button class="trivia-button" onclick="changeText('trivia')">Trivia</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function changeText(section) {
+      var textContainer = document.getElementById('description-text');
+      if (section === 'description') {
+        textContainer.innerHTML = 'Spirited Away tells the story of Chihiro, a young girl who finds herself trapped in a mysterious and magical world of spirits. To return to the human world, she must work in a bathhouse for the spirits and find her inner strength.';
+      } else if (section === 'cast') {
+        textContainer.innerHTML = '<b style="text-align: center;">Main Cast</b><br><br style="text-align: center;"><b>CHIHIRO:</b> Rumi Hiiragi<br><b>HAKU:</b> Miyu Irino<br><b>YUBABA:</b> Mari Natsuki<br><b>KAMAJI:</b> Bunta Sugawara';
+      } else if (section === 'trivia') {
+        textContainer.innerHTML = '<b style="text-align: center;">Trivia</b><br><br>It is the only non-English language film to win the Academy Award for Best Animated Feature.<br>The movie was made without a script; Hayao Miyazaki wrote the story as he drew the storyboard!<br>Spirited Away overtook Titanic\'s box office record in Japan when released.';
+      }
+    }
+  </script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
